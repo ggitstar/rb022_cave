@@ -1,0 +1,7 @@
+<lanuch>
+	<include file="$(find ros_joy_teleop)/launch/joy_controller.launch" />
+	<include file="$(find rplidar_ros)/launch/view_rplidar2.launch" />
+	<node pkg="image_view" type="image_view" name="image_view" output="screen" />
+		<remap from="image" ro="/image_raw/compressed" />
+	</node>	
+</lanuch>
