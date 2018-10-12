@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 2.8.3)
 project(rb022_cave)
 
 find_package(catkin REQUIRED COMPONENTS
-  message_generation
   roscpp
   rospy
   std_msgs
@@ -26,7 +25,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
   LIBRARIES rb022_cave
-  CATKIN_DEPENDS message_generation roscpp rospy std_msgs tf
+  CATKIN_DEPENDS roscpp rospy std_msgs tf
 #  DEPENDS system_lib
 )
 

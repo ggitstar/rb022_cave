@@ -36,7 +36,7 @@ tf::TransformBroadcaster tfbc_odom;
 void init(void);
 void encCallback(const std_msgs::Int32MultiArray::ConstPtr& array_s32);
 void imuCallback(const std_msgs::Float32MultiArray::ConstPtr& array_f32);
-
+void getQuaternionMsg(double roll,double pitch,double yaw,geometry_msgs::Quaternion &q);
 int main(int argc,char **argv){
 	ros::init(argc,argv,"odom_tf_publisher");
 	
@@ -55,9 +55,7 @@ int main(int argc,char **argv){
 	ros::Rate r(20.0);
 	
 	ros::spin();
-	while(nh.ok()){
-		
-	}
+	while(nh.ok()){}
 	return 0;
 }		
 void init(void){
