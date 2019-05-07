@@ -1,2 +1,2 @@
 # rb022_cave
-cave sotuken
+中途半端
